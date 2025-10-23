@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đăng ký CV</title>
+  <link rel="stylesheet" href="Styles/Q22.css">
+</head>
+<body>
+  <h1>Đăng ký CV</h1>
+
+  <form id="cvForm">
+    <table>
+      <tr><td>Họ và tên</td><td><input type="text" id="name" required></td></tr>
+      <tr><td>Địa chỉ</td><td><input type="text" id="address" required></td></tr>
+      <tr><td>Điện thoại</td><td><input type="text" id="phone" required></td></tr>
+      <tr><td>Email</td><td><input type="email" id="email" required></td></tr>
+      <tr><td>Nghề nghiệp</td><td><input type="text" id="job" required></td></tr>
+      <tr><td>Ảnh đại diện</td><td><input type="file" id="avatar" accept="image/*"></td></tr>
+      <tr>
+        <td>Kỹ năng</td>
+        <td id="skillList">
+          <div class="skill-row">
+            <input type="text" placeholder="Tên kỹ năng" class="skill-name" required>
+            <input type="range" min="0" max="100" step="10" class="skill-level">
+          </div>
+          <a href="#" id="addSkill">+ Thêm</a>
+        </td>
+      </tr>
+      <tr><td colspan="2" style="text-align:center">
+        <button type="submit">Đăng ký</button>
+      </td></tr>
+    </table>
+  </form>
+
+  <h2 style="text-align:center; margin-top:40px;">Danh sách CV đã đăng ký</h2>
+  <div id="cvList"></div>
+
+  <script src="Scripts/Q22.js"></script>
+</body>
+</html>
